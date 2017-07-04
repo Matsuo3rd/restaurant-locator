@@ -81,7 +81,7 @@ component('searchResult', {
 
 // Define the search-pagination
 component('searchPagination', {
-  template: '<div class="pager">\n      <!--button class="previous" ng-click="previousPage()">Previous</button>\n      <span class="current-page"><span ng-bind-html="page"></span></span>\n      <button class="next" ng-click="nextPage()">Next</button-->\n\n      <button ng-if="nbPages != 0 && nbPages != 1" class="showMore" ng-click="showMore()">Show More</button>\n    </div>',
+  template: '<div class="pager">\n      <!--button class="previous" ng-click="previousPage()">Previous</button>\n      <span class="current-page"><span ng-bind-html="page"></span></span>\n      <button class="next" ng-click="nextPage()">Next</button-->\n      <button ng-if="nbPages > 0 && nbPages != page" class="showMore" ng-click="showMore()">Show More</button>\n    </div>',
   controller: function SearchPaginationController($scope, helper) {
     helper.on('result', function (results) {
       $scope.$apply($scope.page = "" + (results.page + 1));

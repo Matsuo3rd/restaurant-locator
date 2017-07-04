@@ -169,8 +169,7 @@ component('searchPagination', {
       <!--button class="previous" ng-click="previousPage()">Previous</button>
       <span class="current-page"><span ng-bind-html="page"></span></span>
       <button class="next" ng-click="nextPage()">Next</button-->
-
-      <button ng-if="nbPages != 0 && nbPages != 1" class="showMore" ng-click="showMore()">Show More</button>
+      <button ng-if="nbPages > 0 && nbPages != page" class="showMore" ng-click="showMore()">Show More</button>
     </div>`,
   controller: function SearchPaginationController($scope, helper) {
     helper.on('result', results => {
