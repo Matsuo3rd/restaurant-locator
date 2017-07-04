@@ -1,0 +1,395 @@
+/*:root {
+  font-size: 16px;
+}*/
+/* line 19, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+* {
+  box-sizing: border-box;
+  /*font-family: Arial;*/ }
+
+/* line 24, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  /*width: 100%;*/
+  height: 100%;
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+
+/* line 33, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+body {
+  /*background: $background-color;*/
+  background-image: url("../../resources/graphics/background.png"); }
+
+/* line 38, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+/* line 44, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+input[type="checkbox"] {
+  display: inline-block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 8px 8px 0 0;
+  border-radius: 3px;
+  line-height: 42px;
+  cursor: pointer; }
+  /* line 59, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  input[type="checkbox"]:checked:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    /*background: url("data:image/svg+xml;utf8,<svg viewBox=\'0 0 62 46\' xmlns=\'http://www.w3.org/2000/svg\'><title>Shape</title><path d=\'M60.467 1.54c-1.562-1.562-4.096-1.562-5.658 0L20.867 35.48 7.194 21.806c-1.562-1.562-4.095-1.562-5.657 0-1.562 1.562-1.562 4.095 0 5.657L18.04 43.966c.78.78 1.805 1.172 2.83 1.172 1.023 0 2.046-.39 2.828-1.172l36.77-36.77c1.56-1.562 1.56-4.094 0-5.656z\' fill=\'%2314C145\' fill-rule=\'evenodd\'/></svg>")no-repeat center center / 70%;*/ }
+
+/* line 65, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+header {
+  padding: 0 1em;
+  max-width: 1200px;
+  margin: auto; }
+  /* line 70, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  header a {
+    color: inherit;
+    text-decoration: none; }
+  /* line 74, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  header span {
+    color: #42A5EE; }
+  @media (max-height: 790px) and (max-width: 730px) {
+    /* line 65, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    header {
+      display: none; } }
+
+/* line 82, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+.app {
+  padding: 1em;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  /*.categories,*/ }
+  /* line 88, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .search-box-header {
+    background-color: #1C688E;
+    padding: 25px; }
+    /* line 93, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .search-box-header .search-box {
+      font-size: 1.12em;
+      /*font-size: 18px;*/
+      padding: 1em 0.75em;
+      width: 100%;
+      appearance: none;
+      border: none;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      /*background: #fff url("data:image/svg+xml;utf8,<svg width=\'48\' height=\'48\' viewBox=\'0 0 48 48\' xmlns=\'http://www.w3.org/2000/svg\'><title>Shape</title><path d=\'M47.008 41.814L32.016 27.13c1.754-2.77 2.68-5.97 2.68-9.263 0-9.565-7.783-17.35-17.348-17.35C7.783.518 0 8.302 0 17.868c0 9.565 7.783 17.346 17.348 17.346 3.654 0 7.15-1.133 10.127-3.28l14.908 14.604c.62.61 1.44.945 2.313.945.896 0 1.736-.354 2.363-.994 1.273-1.302 1.25-3.398-.052-4.674zm-29.66-11.396c-6.92 0-12.55-5.63-12.55-12.55 0-6.92 5.63-12.55 12.55-12.55 6.92 0 12.55 5.63 12.55 12.55 0 3.258-1.243 6.346-3.5 8.695-2.39 2.486-5.605 3.855-9.05 3.855z\' fill=\'%23A7A7A7\' fill-rule=\'evenodd\'/></svg>")no-repeat center right 24px / 32px;*/
+      border-radius: 4px; }
+  /* line 106, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .header {
+    overflow: hidden;
+    padding: 0px; }
+    /* line 109, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .header .header-results {
+      float: left;
+      border-bottom: none; }
+      /* line 113, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .header .header-results .duration {
+        font-size: 0.8em; }
+    /* line 117, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .header .header-filler {
+      border-bottom: 1px solid #efefef;
+      overflow: hidden; }
+  /* line 124, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .facet-list,
+  .app .results {
+    float: left;
+    /*border-radius: 4px;*/
+    /*margin-right: 16px;*/
+    margin-left: 0;
+    /*margin-top: 1em;*/
+    /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);*/
+    background: #fff; }
+    /* line 134, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facet-list .facetHeader,
+    .app .results .facetHeader {
+      display: block;
+      font-weight: bold;
+      padding-bottom: 10px; }
+  /* line 141, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .facets {
+    float: left;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    /*.categories,*/ }
+    /* line 147, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet.facet_food_type label,
+    .app .facets .facet.facet_selected_payment_options label {
+      height: 40px;
+      overflow: hidden;
+      display: block;
+      width: 100%; }
+      /* line 152, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .facets .facet.facet_food_type label:after,
+      .app .facets .facet.facet_selected_payment_options label:after {
+        content: "";
+        display: table;
+        clear: both; }
+    /* line 158, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet.facet_food_type label, .app .facets .facet.facet_food_type span,
+    .app .facets .facet.facet_selected_payment_options label,
+    .app .facets .facet.facet_selected_payment_options span {
+      cursor: pointer;
+      display: block;
+      position: relative;
+      overflow: hidden; }
+    /* line 164, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet.facet_food_type .facetValue,
+    .app .facets .facet.facet_food_type .facetCount,
+    .app .facets .facet.facet_selected_payment_options .facetValue,
+    .app .facets .facet.facet_selected_payment_options .facetCount {
+      float: left;
+      line-height: 40px;
+      height: 40px; }
+    /* line 170, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet.facet_food_type .facetValue,
+    .app .facets .facet.facet_selected_payment_options .facetValue {
+      padding: 0 0 0 20px;
+      width: 78%; }
+    /* line 174, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet.facet_food_type .facetCount,
+    .app .facets .facet.facet_selected_payment_options .facetCount {
+      padding: 0 30px 0 0;
+      text-align: right;
+      width: 20%; }
+    /* line 180, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet-list {
+      clear: both;
+      width: 100%;
+      padding: 1em  26px; }
+      /* line 184, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .facets .facet-list li {
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        border-radius: 3px;
+        /*.badge {
+	        background: $accent-color;
+	        color: #fff;
+	        padding: 0.25em 0.5em;
+	        border-radius: 14px;
+	        font-size: 12px;
+	        max-height: 22px;
+	        text-align: right;
+	      }*/ }
+        /* line 192, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .facets .facet-list li:after {
+          content: "";
+          display: table;
+          clear: both; }
+        /* line 197, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .facets .facet-list li:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        /* line 201, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .facets .facet-list li:hover {
+          color: #2897C5; }
+        /* line 206, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .facets .facet-list li.active {
+          color: #FFFFFF;
+          background-color: #2897C5;
+          background-clip: content-box; }
+          /* line 210, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+          .app .facets .facet-list li.active span {
+            color: #fff; }
+        /* line 215, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .facets .facet-list li .facetCount {
+          float: right;
+          color: #9A9A9A; }
+          /* line 219, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+          .app .facets .facet-list li .facetCount .active {
+            color: #FFFFFF; }
+      @media (max-width: 900px) {
+        /* line 180, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .facets .facet-list {
+          width: 100%;
+          max-width: 100%; } }
+    /* line 240, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .facets .facet_stars_count .facet-list li {
+      background-color: transparent; }
+      /* line 242, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .facets .facet_stars_count .facet-list li .stars {
+        cursor: pointer; }
+      /* line 245, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .facets .facet_stars_count .facet-list li .facetCount {
+        height: 35px;
+        line-height: 35px;
+        padding-right: 36px;
+        cursor: pointer; }
+      /* line 251, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .facets .facet_stars_count .facet-list li:hover .facetCount {
+        color: #2897C5; }
+      /* line 255, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .facets .facet_stars_count .facet-list li.active .facetCount {
+        color: #2897C5;
+        font-weight: bold; }
+  /* line 263, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .results, .app .page {
+    position: relative;
+    margin-right: 0;
+    /* max-width: calc(100% - 360px); */
+    width: 100%;
+    overflow: auto;
+    padding: 1em; }
+    @media (max-width: 900px) {
+      /* line 263, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .results, .app .page {
+        max-width: 100%; } }
+  /* line 278, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .results div {
+    padding: 0.75em 0.75em;
+    /*border-bottom: 1px solid #efefef;*/
+    /*padding-left: 2.5em;*/
+    position: relative;
+    /* &:before {
+        display: block;
+        float: left;
+        content: '';
+        width: 2.5em;
+        height: 1em;
+        position: absolute;
+        left: 0;
+        background: url("data:image/svg+xml;utf8,<svg viewBox=\'0 0 37 61\' xmlns=\'http://www.w3.org/2000/svg\'><title>Shape</title><path d=\'M10.87 58.832l24.328-24.33c.027-.025.065-.033.09-.06 1.147-1.146 1.716-2.66 1.712-4.17.004-1.51-.564-3.023-1.71-4.17-.028-.027-.065-.034-.092-.06L10.868 1.713C8.585-.57 4.846-.57 2.562 1.714.278 4 .277 7.738 2.56 10.022l20.252 20.25L2.56 50.525c-2.285 2.285-2.285 6.024 0 8.308 2.285 2.285 6.024 2.285 8.31 0z\' fill=\'%23A7A7A7\' fill-rule=\'evenodd\'/></svg>")no-repeat center center / contain;
+      }*/ }
+  /* line 296, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .results em {
+    background: #FDBD57;
+    padding: 0.15em; }
+  /* line 301, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .results .result {
+    display: flex; }
+    /* line 304, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .results .result .thumbnail {
+      /*float: left;
+  			clear: none;*/
+      /*display: block;
+	    	float: left;
+	    	display: inline-block;
+	      height: 200px;
+	      line-height: 200px;*/
+      /*width: 100%;*/
+      /*width:150px;
+		    height:150px;
+		    border-radius:10%;
+		    overflow:hidden;*/ }
+      /* line 306, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .results .result .thumbnail .thumbnail-img {
+        border-radius: 4px;
+        width: 80px;
+        height: 80px; }
+    /* line 326, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .results .result .metas {
+      color: #707070;
+      line-height: normal;
+      padding-left: 10px;
+      /*float: left;
+  			clear: none;*/
+      /*display: block;
+	    	padding: 0.75em 0.75em;
+	      border-bottom: 1px solid #efefef;
+	      padding-left: 2.5em;
+	      position: relative;*/ }
+      /* line 331, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .results .result .metas .stars_reviews, .app .results .result .metas .desc {
+        padding-top: 5px; }
+      /* line 335, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .results .result .metas .meta {
+        display: block; }
+        /* line 338, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .results .result .metas .meta .name-link {
+          color: black;
+          font-size: 1.12em;
+          /*font-size: 18px;*/
+          font-weight: bold; }
+        /* line 345, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        .app .results .result .metas .meta .stars_count, .app .results .result .metas .meta .reviews {
+          vertical-align: -webkit-baseline-middle; }
+  /* line 362, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  .app .pager {
+    /*position: absolute;*/
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+    bottom: 20px; }
+    /* line 368, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .pager button {
+      /*background: $accent-color;*/
+      background: #FFFFFF;
+      /*color: #fff;*/
+      color: #000000;
+      appearance: none;
+      -webkit-appearance: none;
+      /*border: 0;*/
+      border: 1px solid #E6E6E6;
+      padding: 0.5em 0.25em;
+      cursor: pointer;
+      border-radius: 4px;
+      /*font-size: 18px;*/
+      font-size: 1.12em; }
+      /* line 383, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      .app .pager button:hover {
+        background: #388cca; }
+    /* line 388, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .pager .showMore {
+      max-width: 140px;
+      margin-left: auto;
+      margin-right: auto; }
+    /* line 394, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .pager span {
+      line-height: 32px;
+      font-weight: bold; }
+
+/* line 401, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+span.stars {
+  /*font-size: 13px;*/
+  display: inline-block;
+  /*margin-left: 20px;*/
+  vertical-align: top;
+  background: url("../../resources/graphics/stars-icons.png") 0 0 repeat-x;
+  width: 185px;
+  height: 35px; }
+
+/* line 411, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+span.stars span {
+  background: url("../../resources/graphics/stars-icons.png") 0 -36px repeat-x;
+  display: inline-block;
+  height: 35px; }
+
+/* line 417, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+.flex-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+/* line 423, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+.flex-wrapper {
+  display: flex;
+  flex: 1; }
+
+/* line 428, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+.flex-column.nav {
+  flex: 0 0 360px;
+  border-right: 2px solid #e6e6e6; }
+
+/* line 432, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+.flex-column.content {
+  flex: 1;
+  background-color: white;
+  position: relative; }
+
+/*# sourceMappingURL=../../scss */

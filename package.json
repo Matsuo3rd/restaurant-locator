@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-locator",
+  "version": "1.0.0",
+  "description": "Please refer to the README file for the test instructions",
+  "main": "index.html",
+  "scripts": {
+    "dev": "gulp dev",
+    "server": "gulp server",
+    "babel": "babel assets/babel -d assets/js"
+  },
+  "author": "Bertrand Martel",
+  "license": "Algolia",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-less-sourcemap": "^1.4.3",
+    "gulp-sass": "^2.3.1",
+    "gulp-babel": "^6.1.2"
+  }
+}

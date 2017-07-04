@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Example using Angular 1.0 with Algolia Search Helper</title>
+<link rel='stylesheet prefetch' href='assets/css/main.css'>
+</head>
+
+<body class="flex-body">
+
+<!-- 	<header> -->
+<!-- 		<h1> -->
+<!-- 			<a href="https://community.algolia.com/algoliasearch-helper-js/">Algolia -->
+<!-- 				Search Helper with <span>Angular 1.0</span> -->
+<!-- 			</a> -->
+<!-- 		</h1> -->
+<!-- 	</header> -->
+	<div class="app" ng-app="AlgoliaSearchHelper">
+	
+		<!-- search-box  -->
+		<search-box></search-box>
+		<!-- Facets -->
+		<div class="flex-wrapper">
+			<div class="flex-column nav">
+				<search-facets></search-facets>
+			</div>
+			<div class="flex-column content">
+				<!-- Results -->
+				<search-result></search-result>
+				<!-- pagination -->
+				<search-pagination></search-pagination>
+			</div>
+		</div>
+	</div>
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.7/angular-sanitize.min.js'></script>
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.18.0/algoliasearch.min.js'></script>
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.12.0/algoliasearch.helper.min.js'></script>
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+    window.jQuery
+	|| document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
+  
+
+	<script src="assets/js/search.js"></script>
+
+</body>
+</html>
