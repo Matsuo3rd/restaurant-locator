@@ -6,34 +6,29 @@ To make my onboarding smoother, it'd help if you could provide me with some defi
 - Records
 - Indexing
 
-I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking." 
+I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking." 
 
 Cheers,
 George
 
 * Answer 1:
-
 Hello George,
 
 I am glad to help you getting introduced to those concepts.
 
-- Records (see https://www.algolia.com/doc/faq/basics/what-is-a-record/)
- A record is an object you add to an index and want to search for. It can contain any number of attributes
-(string, date, number, GPS coordinates, etc.).
-A record can embody any type of items you want to expose in your search experience: an e-commerce Item, a Movie for rental,
-a People profile, a Restaurant to book a table at, etc.
+- Records
+A record is an object you add to an index and want to search for.
+It can contain any number of attributes (string, date, number, GPS coordinates, etc.).
 
-- Indexing (see https://www.algolia.com/doc/guides/indexing/indexing-overview/)
+- Indexing
 Indexing is the process of uploading your backend data up to Algolia's on-the-cloud Search Engine.
 Your data is then stored into an Index. It is the equivalent for search of what a “table” is for a database.
 Unlike a database table, an index is optimized for search operations.
 
-- Custom Ranking (see https://www.algolia.com/doc/guides/ranking/custom-ranking/#metric-types)
-Algolia provides a default ranking mechanism that you can tune to implement specific business requirements.
-The custom ranking field will accept any type of numerical or boolean value that represents the relative 
-relevance of your records.
+- Custom Ranking
+The custom ranking field will accept any type of numerical or boolean value that represents the relative relevance of your records.
 Numerical metrics are used to give precedence to specific characteristics (like the number of sales, views or likes).
-Boolean metrics are used to boost records at the *top* of the results page (think Google Ads links). 
+Boolean metrics are used to boost records at the *top* of the results page (think Google Ads links). 
 
 I hope it makes more sense now. Please feel free to get back to me if you have more questions.
 By the way, we have plenty of materials to get you educated on Algolia on our website (https://www.algolia.com/doc/).
@@ -47,7 +42,7 @@ Bertrand
 Hello,
 
 Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new dashboard design.
-Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, 
+Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, 
 so this is inconvenient.
 
 Regards,
@@ -57,20 +52,16 @@ Matt
 
 Hello Matt,
 
-Every constructive feedbacks are welcome, so we appreciate your comment.
-I understand that under development iterative process this is less handy. But, we have decided to add an additional 
-confirmation step to prevent unintentional index deletion on production environment (you know, that awkward moment when after
-a pretty long day of work you wipe off your production environment data and you definitely had 
-other plans for the night instead of fixing your mess).
+We have decided to add an additional confirmation step to prevent unintentional index deletion on live environment.
 
-That being said, for your dev environment purposes, may I recommend you to use CURL scripts for making such tasks more handy?
+For your development purposes, may I recommend you to use CURL scripts for making such tasks more handy?
 CLEAR Index: see https://www.algolia.com/doc/rest-api/search/#clear-an-index
 DELETE Index: see https://www.algolia.com/doc/rest-api/search/#delete-an-index
 
 I hope I have been helpful. Please feel free to get back to me if you have more questions.
 
 Kind Regards,
-Bertrand 
+Bertrand 
 
 **************************************************************************************************************
 
@@ -87,32 +78,27 @@ Leo
 
 Hello Leo,
 
-Integrating Algolia in your website is quite easy and straightforward. Taking care of developers needs is at the core 
-of Algolia's product.
-You can evaluate Algolia for free and start your journey at 
-https://www.algolia.com/doc/guides/getting-started/the-implementation-process/.
-
 Implementing Algolia can be broken down into a simple 3-step process:
 
 . Index your data with us
 Algolia provides plenty of API wrappers in a wide range of programming languages
-(see https://www.algolia.com/doc/api-reference/) for you to integrate in your environment.
+(see https://www.algolia.com/doc/api-reference/) for you to integrate Algolia in your environment.
 
 . Configure any necessary relevance or ranking settings
 See https://www.algolia.com/doc/guides/ranking/ranking-formula/.
-This is when you define which attributes can be searched and which ones impact scoring.
+This step defines which attributes can be searched and which ones impact scoring.
 
 . Build a search user interface.
 See https://www.algolia.com/doc/guides/search-ui/building-a-search-ui/
 
-For performance reason, Algolia highly recommends to fetch and display search results directly on client-side (browser),
+For performance reason, Algolia highly recommends to fetch and display search results directly on client-side (browser), 
 instead of having your backend server calling Algolia and serving results back to the client (time-costly network hops).
-To this end, Algolia provides InstantSearch.js, a JavaScript library of UI widgets for building an instant 
-search experience with Algolia’s JS API client
+To this end, Algolia provides InstantSearch.js, a JavaScript library of UI widgets for building an instant search experience with Algolia’s JS API client
 (see https://www.algolia.com/doc/guides/search-ui/search-libraries/#instantsearchjs).
- 
+ 
 I hope I have been helpful. Please feel free to get back to me if you have more questions.
 
 Kind Regards,
 Bertrand
+
 
