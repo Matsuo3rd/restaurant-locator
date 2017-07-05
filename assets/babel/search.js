@@ -52,7 +52,7 @@ component('searchBox', {
 
 // Define the search-facets
 component('searchFacets', {
-  template: `<div class="facets">
+  template: `<div class="facets" ng-if="nbHits > 0">
     	      <div class="facet facet_food_type">
         	<ul class="facet-list">
         	  <div class="facetHeader">Cuisine/Food Type</div>
@@ -99,6 +99,8 @@ component('searchFacets', {
                 </ul>
     	     </div>
     	     </div>
+    	     <div class="facets noResults" ng-if="nbHits == 0">
+    	     </div>
     	     `,
   controller: function SearchFacetsController($scope, helper) {
     $scope.toggleFacet = function (facet, value) {
@@ -116,6 +118,7 @@ component('searchFacets', {
 	facets[helper.state.disjunctiveFacets[i]] = results.getFacetValues(helper.state.disjunctiveFacets[i]);
       }
       $scope.$apply($scope.facets = facets);
+      $scope.$apply($scope.nbHits = results.nbHits);
     });
   }
 }).
@@ -124,11 +127,16 @@ component('searchFacets', {
 component('searchResult', {
   template: `
     <div class="results header">
-    	   <div class="header-results">
+	<div class="header-results">
+		<div ng-if="results.nbHits > 0">
     	   	<span class="nbHits">{{results.nbHits}} results found</span>
     	   	<span class="duration">in {{(results.processingTimeMS / 1000)}} seconds</span></div>
-    	   <div class="header-filler"></div>
-        </div>
+    	   	</div>
+    	   	<div ng-if="results.nbHits == 0">
+    	   		No Restaurant could be found
+    	   	</div>
+	<div class="header-filler"></div>
+     </div>
      <div class="hit results">
       <span ng-repeat="hit in results.hits">
 	<!--<div ng-bind-html="hit._highlightResult.name.value"></div>-->
@@ -151,9 +159,9 @@ component('searchResult', {
           </span>
         </div>
       </span>
-      <span ng-if="results.hits.length === 0">
-        No results found 😓
-      </span>
+      <div ng-if="results.nbHits === 0" class="no-results hit results">
+        <div class="result">&nbsp;</div>
+      </div>
     </div>`,
   controller: function SearchResultController($scope, helper) {
     helper.on('result', results => {
