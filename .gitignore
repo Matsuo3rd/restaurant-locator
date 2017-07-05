@@ -1,9 +1,7 @@
 # Mac
 .DS_Store
 
-# Homebridge
 config.json
-homebridge
 
 # Node
 node_modules/
