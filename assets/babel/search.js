@@ -129,6 +129,11 @@ component('searchResult', {
     <div class="results header">
 	<div class="header-results">
 		<div ng-if="results.nbHits > 0">
+		<!--button class="facet-toggle" ng-click="toggleFacets()">Toggle Categories</button-->
+		<span class="facet-toggle">
+		  <img src="./resources/graphics/menu-alt.png"  ng-click="toggleFacets()"
+		  	alt="Toggle filters" title="Toggle filters"></img>
+		</span>
     	   	<span class="nbHits">{{results.nbHits}} results found</span>
     	   	<span class="duration">in {{(results.processingTimeMS / 1000)}} seconds</span></div>
     	   	</div>
@@ -168,6 +173,10 @@ component('searchResult', {
       $scope.$apply($scope.results = results);
       $('span.stars').stars();
     });
+    
+   $scope.toggleFacets = function() {
+     $('.flex-column.nav').toggle();
+   }
   }
 }).
 

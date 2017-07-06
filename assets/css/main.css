@@ -1,13 +1,15 @@
+/*$max-width: 1200px;*/
+/*$sidebar-width: 360px;*/
 /*$accent-color: #42A5EE;*/
 /*:root {
   font-size: 16px;
 }*/
-/* line 20, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 22, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 * {
   box-sizing: border-box;
   /*font-family: Arial;*/ }
 
-/* line 25, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 27, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 html, body {
   padding: 0;
   margin: 0;
@@ -16,12 +18,12 @@ html, body {
   font-size: 1em;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
 
-/* line 34, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 36, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 body {
   /*background: $background-color;*/
   background-image: url("../../resources/graphics/background.png"); }
 
-/* line 39, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 41, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 ul {
   padding: 0;
   margin: 0;
@@ -46,37 +48,37 @@ ul {
     @include greenTick();
   }
 }*/
-/* line 66, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 68, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 header {
   padding: 0 1em;
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto; }
-  /* line 71, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 73, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   header a {
     color: inherit;
     text-decoration: none; }
-  /* line 75, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 77, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   header span {
     color: #FFFFFF; }
   @media (max-height: 790px) and (max-width: 730px) {
-    /* line 66, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 68, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     header {
       display: none; } }
 
-/* line 83, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 85, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 .app {
   padding: 1em;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   min-height: 900px;
   margin: auto;
   position: relative;
   /*.categories,*/ }
-  /* line 91, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 93, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .search-box-header {
     background-color: #1C688E;
     padding: 25px; }
-    /* line 96, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 98, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .search-box-header .search-box {
       font-size: 1.12em;
       /*font-size: 18px;*/
@@ -86,23 +88,27 @@ header {
       border: none;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
       border-radius: 4px; }
-  /* line 108, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 110, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .header {
     overflow: hidden;
     padding: 0px; }
-    /* line 111, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 114, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    .app .header .facet-toggle {
+      cursor: pointer;
+      vertical-align: -webkit-baseline-middle; }
+    /* line 118, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .header .header-results {
       float: left;
       border-bottom: none; }
-      /* line 115, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 122, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .header .header-results .duration {
         font-size: 0.8em; }
-    /* line 119, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 126, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .header .header-filler {
       border-bottom: 1px solid #efefef;
       overflow: hidden;
-      padding-top: 1.6em; }
-  /* line 127, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      padding-top: 2.5em; }
+  /* line 134, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .facet-list,
   .app .results {
     float: left;
@@ -112,34 +118,34 @@ header {
     /*margin-top: 1em;*/
     /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);*/
     background: #fff; }
-    /* line 137, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 144, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facet-list .facetHeader,
     .app .results .facetHeader {
       display: block;
       font-weight: bold;
       padding-bottom: 10px; }
-  /* line 144, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 151, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .facets {
     width: 100%;
     float: left;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
-    /* line 149, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 156, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets.noResults {
       background: #FFFFFF; }
-    /* line 155, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 162, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet.facet_food_type label,
     .app .facets .facet.facet_selected_payment_options label {
       height: 40px;
       overflow: hidden;
       display: block;
       width: 100%; }
-      /* line 160, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 167, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .facets .facet.facet_food_type label:after,
       .app .facets .facet.facet_selected_payment_options label:after {
         content: "";
         display: table;
         clear: both; }
-    /* line 166, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 173, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet.facet_food_type label, .app .facets .facet.facet_food_type span,
     .app .facets .facet.facet_selected_payment_options label,
     .app .facets .facet.facet_selected_payment_options span {
@@ -147,7 +153,7 @@ header {
       display: block;
       position: relative;
       overflow: hidden; }
-    /* line 172, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 179, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet.facet_food_type .facetValue,
     .app .facets .facet.facet_food_type .facetCount,
     .app .facets .facet.facet_selected_payment_options .facetValue,
@@ -155,23 +161,23 @@ header {
       float: left;
       line-height: 40px;
       height: 40px; }
-    /* line 178, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 185, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet.facet_food_type .facetValue,
     .app .facets .facet.facet_selected_payment_options .facetValue {
       padding: 0 0 0 20px;
       width: 78%; }
-    /* line 182, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 189, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet.facet_food_type .facetCount,
     .app .facets .facet.facet_selected_payment_options .facetCount {
       padding: 0 30px 0 0;
       text-align: right;
       width: 20%; }
-    /* line 188, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 195, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet-list {
       clear: both;
       width: 100%;
       padding: 1em  26px; }
-      /* line 192, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 199, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .facets .facet-list li {
         display: inline-block;
         width: 100%;
@@ -189,57 +195,57 @@ header {
 	        max-height: 22px;
 	        text-align: right;
 	      }*/ }
-        /* line 200, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 207, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .facets .facet-list li:after {
           content: "";
           display: table;
           clear: both; }
-        /* line 205, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 212, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .facets .facet-list li:not(:last-child) {
           border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-        /* line 209, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 216, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .facets .facet-list li:hover {
           color: #2897C5; }
-        /* line 214, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 221, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .facets .facet-list li.active {
           color: #FFFFFF;
           background-color: #2897C5;
           background-clip: content-box; }
-          /* line 218, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+          /* line 225, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
           .app .facets .facet-list li.active span {
             color: #fff; }
-        /* line 223, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 230, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .facets .facet-list li .facetCount {
           float: right;
           color: #9A9A9A; }
-          /* line 227, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+          /* line 234, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
           .app .facets .facet-list li .facetCount .active {
             color: #FFFFFF; }
       @media (max-width: 900px) {
-        /* line 188, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 195, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .facets .facet-list {
           width: 100%;
           max-width: 100%; } }
-    /* line 248, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 255, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .facets .facet_stars_count .facet-list li {
       background-color: transparent; }
-      /* line 250, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 257, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .facets .facet_stars_count .facet-list li .stars {
         cursor: pointer; }
-      /* line 253, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 260, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .facets .facet_stars_count .facet-list li .facetCount {
         height: 35px;
         line-height: 35px;
         padding-right: 36px;
         cursor: pointer; }
-      /* line 259, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 266, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .facets .facet_stars_count .facet-list li:hover .facetCount {
         color: #2897C5; }
-      /* line 263, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 270, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .facets .facet_stars_count .facet-list li.active .facetCount {
         color: #2897C5;
         font-weight: bold; }
-  /* line 271, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 278, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .results, .app .page {
     position: relative;
     margin-right: 0;
@@ -247,23 +253,23 @@ header {
     overflow: auto;
     padding: 1em; }
     @media (max-width: 900px) {
-      /* line 271, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 278, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .results, .app .page {
         max-width: 100%; } }
-  /* line 285, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 292, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .results div {
     padding: 0.75em 0.75em;
     /*border-bottom: 1px solid #efefef;*/
     /*padding-left: 2.5em;*/
     position: relative; }
-  /* line 292, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 299, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .results em {
     background: #FDBD57;
     padding: 0.15em; }
-  /* line 297, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 304, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .results .result {
     display: flex; }
-    /* line 300, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 307, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .results .result .thumbnail {
       /*float: left;
   			clear: none;*/
@@ -277,12 +283,12 @@ header {
 		    height:150px;
 		    border-radius:10%;
 		    overflow:hidden;*/ }
-      /* line 302, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 309, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .results .result .thumbnail .thumbnail-img {
         border-radius: 4px;
         width: 80px;
         height: 80px; }
-    /* line 322, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 329, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .results .result .metas {
       color: #707070;
       line-height: normal;
@@ -294,29 +300,29 @@ header {
 	      border-bottom: 1px solid #efefef;
 	      padding-left: 2.5em;
 	      position: relative;*/ }
-      /* line 327, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 334, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .results .result .metas .stars_reviews, .app .results .result .metas .desc {
         padding-top: 5px; }
-      /* line 331, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 338, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .results .result .metas .meta {
         display: block; }
-        /* line 334, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 341, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .results .result .metas .meta .name-link {
           color: black;
           font-size: 1.12em;
           /*font-size: 18px;*/
           font-weight: bold; }
-        /* line 341, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+        /* line 348, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
         .app .results .result .metas .meta .stars_count, .app .results .result .metas .meta .reviews {
           vertical-align: -webkit-baseline-middle; }
-  /* line 358, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+  /* line 365, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
   .app .pager {
     /*position: absolute;*/
     vertical-align: top;
     text-align: center;
     width: 100%;
     margin-bottom: 20px; }
-    /* line 364, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 371, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .pager button {
       /*background: $accent-color;*/
       background: #FFFFFF;
@@ -331,20 +337,20 @@ header {
       border-radius: 4px;
       /*font-size: 18px;*/
       font-size: 1.12em; }
-      /* line 379, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+      /* line 386, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
       .app .pager button:hover {
         background: #d9d9d9; }
-    /* line 384, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 391, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .pager .showMore {
       max-width: 140px;
       margin-left: auto;
       margin-right: auto; }
-    /* line 390, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+    /* line 397, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
     .app .pager span {
       line-height: 32px;
       font-weight: bold; }
 
-/* line 397, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 404, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 span.stars {
   /*font-size: 13px;*/
   display: inline-block;
@@ -354,30 +360,30 @@ span.stars {
   width: 185px;
   height: 35px; }
 
-/* line 407, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 414, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 span.stars span {
   background: url("../../resources/graphics/stars-icons.png") 0 -36px repeat-x;
   display: inline-block;
   height: 35px; }
 
-/* line 413, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 420, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 .flex-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
 
-/* line 419, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 426, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 .flex-wrapper {
   display: flex;
   flex: 1; }
 
-/* line 424, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 431, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 .flex-column.nav {
-  flex: 0 0 360px;
+  flex: 0 0 30%;
   border-right: 2px solid #e6e6e6;
   background: #FFFFFF; }
 
-/* line 429, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
+/* line 436, /CustomerMatrix/Projets/Algolia/assets/scss/main.scss */
 .flex-column.content {
   flex: 1;
   background-color: #FFFFFF;
